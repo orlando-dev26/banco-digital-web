@@ -16,7 +16,7 @@ Este prototipo cubre las siguientes historias de usuario requeridas para la gest
 - ADM-04 (Fraude): Visualizacion de alertas de seguridad y bloqueo de cuentas.
 - ADM-05 (Monitoreo): Panel de estado de salud (Healthchecks) de los microservicios.
 
-## Estructura de Carpetas (Arquitectura Angular)
+## 📂 Estructura de Carpetas (Arquitectura Angular)
 
 ```text
 banca-web/
