@@ -18,7 +18,7 @@ Este prototipo cubre las siguientes historias de usuario requeridas para la gest
 
 ## Estructura de Carpetas (Arquitectura Angular)
 
-`	ext
+```text
 banca-web/
 |-- src/
 |   |-- app/
@@ -33,7 +33,7 @@ banca-web/
 |   |   |   |-- health/          <-- Monitoreo de microservicios (ADM-05)
 |   |-- assets/         <-- (Imagenes, iconos y tipografias estaticas)
 |-- package.json        <-- (Dependencias del proyecto)
-`
+```
 
 ## Guia de Ejecucion Local
 1. Instalar las dependencias de Node: npm install
