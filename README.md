@@ -1,33 +1,41 @@
-# 🌐 Banco Digital - Frontend Web (Angular)
+# Banco Digital - Panel de Administración Web (Frontend)
 
-Este repositorio contiene la aplicación **Frontend Web (Portal Bancario)*** de nuestro proyecto de Banco Digital. Está desarrollado utilizando el framework **Angular** y el preprocesador de estilos **SCSS**.
+Este repositorio contiene el prototipo del **Panel de Administración Web** para nuestro proyecto de Banco Digital. Está diseñado exclusivamente para el uso del personal interno del banco (administradores y auditores).
 
----
+## �h Tecnologías y Versiones
+- **Framework:** Angular >= v22.0.0
+- **Lenguaje:** TypeScript
+- **Estilos:** SCSS (Sass)
+- **Entorno:** Node.js (LTS)
 
-## �	Estructura del Proyecto
+## 📍 Historias de Usuario Implementadas (EP10)
+Este prototipo cubre las siguientes historias de usuario requeridas para la gestión de la plataforma:
+- **ADM-01 (Login):** Inicio de sesión exclusivo para rol de administrador.
+- **ADM-02 (Usuarios):** Listado y búsqueda de cuentas registradas.
+- **ADM-03 (Transacciones):** Detalle y auditoría de transferencias.
+- **ADM-04 (Fraude):** Visualización de alertas de seguridad y bloqueo de cuentas.
+- **ADM-05 (Monitoreo):** Panel de estado de salud (Healthchecks) de los microservicios.
+
+## �	Estructura de Carpetas (Arquitectura Angular)
 
 ```text
 banca-web/
-├── src/
-│   ├── app/                <-- Componentes, servicios y módulos de Angular
-│   ├─– assets/             <-- Imágenes, iconos y fuentes estáticas
-│   ├── index.html          <-- Archivo HTML principal
-│   ├── main.ts             <-- Punto de entrada de la aplicación
-│   └── styles.scss         <-- Estilos globales (SCSS)
-├── angular.json            <-- Configuración del CLI de Angular
-├── package.json            <-- Dependencias de npm
-└── tsconfig.json           <-- Configuración de TypeScript
+|-- src/
+|   |-- app/
+|   |   |-- core/       <-- (Servicios centrales, Guards de autenticación)
+|   |   |-- shared/     <-- (Componentes UI reutilizables, Navbar, Sidebar)
+|   |   |-- features/   <-- (Módulos principales por funcionalidad)
+|   |   |   |-- auth/            <-- Componentes de Login (ADM-01)
+|   |   |   |-- dashboard/       <-- Layout principal del panel
+|   |   |   |-- users/           <-- Listado de usuarios (ADM-02)
+|   |   |   |-- transactions/    <-- Auditoqía de transacciones (ADM-03)
+|   |   |   |-- fraud/           <-- Alertas de fraude (ADM-04)
+|   |   |   |-- health/          <-- Monitoreo de microservicios (ADM-05)
+|   |-- assets/         <-- (Imágenes, íconos y tipografías estáticas)
+|-- package.json        <-- (Dependencias del proyecto)
 ```
 
----
-
-## 🚀 Guía de Desarrollo Rápido
-
-### Prerrequisitos
-*   [Node.js](https://nodejs.org/)
-*   Angular CLI: `npm install -g @angular/cli`
-
-### Ejecución Local
-1. Instala las dependencias: `npm install`
-2. Levanta el servidor: `ng serve -o`
-   *(La aplicación se abrirá en http://localhost:4200)*
+## 🚀 Guía de Ejecución Local
+1. Instalar las dependencias de Node: `npm install`
+2. Levantar el servidor de desarrollo: `ng serve -o`
+3. La aplicación se abrirá automáticamente en `http://localhost:4200`
